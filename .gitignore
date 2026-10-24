@@ -1,0 +1,20 @@
+# Arquivos gerados pelo .NET
+bin/
+obj/
+
+# Configurações locais dos editores
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Arquivos locais e credenciais
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
