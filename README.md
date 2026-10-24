@@ -6,12 +6,14 @@ O objetivo é praticar variáveis, funções, condicionais, repetição e leitur
 ## Como jogar
 
 O programa sorteia um número entre **1 e 100**, inclusive. Digite um palpite e
-receba uma dica: o número secreto é maior ou menor. Ao acertar, o jogo informa
+receba uma dica: o número secreto é maior ou menor. Antes da partida, escolha
+a dificuldade: fácil (10 tentativas), médio (5) ou difícil (3). Se as chances
+acabarem, o jogo revela o número secreto e encerra. Ao acertar, o jogo informa
 quantas tentativas válidas foram necessárias e pergunta se você deseja jogar novamente.
 Digite `s` para iniciar outra partida ou `n` para sair.
 
-Entradas que não são números inteiros entre 1 e 100 não contam como tentativas.
-Na pergunta de reinício, maiúsculas e espaços ao redor da resposta são aceitos.
+Entradas que não são números inteiros não contam como tentativas.
+Na pergunta de reinício, maiúsculas são aceitas. A nova partida mantém a dificuldade escolhida.
 
 ## Como executar
 
@@ -43,8 +45,8 @@ executado com `dotnet`. Não é necessário um arquivo de solução para este ex
 - Removida a impressão do número secreto, que revelava a resposta.
 - Adicionado `break` ao `case "s"` do `switch`. Em C#, deixar um `case` com
   instruções continuar para o próximo causa o erro de compilação `CS0163`.
-- Validados os palpites entre 1 e 100 antes de contar uma tentativa.
-- Tratado o fim da entrada para evitar repetição infinita quando não há mais dados.
+- Adicionado menu de dificuldade com limites de 10, 5 ou 3 tentativas.
+- Ao esgotar as tentativas, o jogo informa o número secreto e encerra a partida.
 - Mantidos os conceitos de funções, `if`/`else`, `while` e `switch` do exercício.
 
 ## Como enviar para o GitHub
@@ -111,3 +113,4 @@ git rev-parse HEAD
 ```
 
 O identificador retornado para `main` deve ser igual ao commit local (`HEAD`).
+
